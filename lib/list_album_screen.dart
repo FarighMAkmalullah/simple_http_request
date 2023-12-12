@@ -37,25 +37,21 @@ class _ListAplbumScreenState extends State<ListAplbumScreen> {
           future: _futureAlbum,
           builder: (context, snapshot) {
             if (snapshot.connectionState != ConnectionState.done) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
+              return const CircularProgressIndicator();
             } else if (snapshot.hasData) {
               return Container(
-                margin: const EdgeInsets.all(16),
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Colors.black,
+                    width: 1,
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(snapshot.data!.title),
               );
             } else if (snapshot.hasError) {
-              return Center(
-                child: Text("${snapshot.error}"),
-              );
+              return Text("${snapshot.error}");
             } else {
               return Container();
             }
