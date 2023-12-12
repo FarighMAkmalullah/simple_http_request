@@ -46,7 +46,7 @@ class _ListAplbumScreenState extends State<ListAplbumScreen> {
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
